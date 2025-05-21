@@ -1,0 +1,250 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "enum KlineStorage.Interval",
+						"name": "interval",
+						"type": "uint8"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "openTime",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "open",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "high",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "low",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "close",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "volume",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "isClosed",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct KlineStorage.Candle",
+						"name": "candle",
+						"type": "tuple"
+					}
+				],
+				"name": "addCandle",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum KlineStorage.Interval",
+						"name": "",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "candles",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "openTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "open",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "high",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "low",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "close",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "volume",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isClosed",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum KlineStorage.Interval",
+						"name": "interval",
+						"type": "uint8"
+					}
+				],
+				"name": "getCandles",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "openTime",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "open",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "high",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "low",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "close",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "volume",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "isClosed",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct KlineStorage.Candle[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "initialize",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "initialized",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/KlineStorage.sol": "KlineStorage"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/KlineStorage.sol": {
+			"keccak256": "0x99b7ba94f4c8452c1fd35ca8ebad789510f84c38fdee424f6d05319b92fce40d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://abe08dd427581ba3f93df838dda4489e747ca181b0355b7623b256976c292f85",
+				"dweb:/ipfs/Qmf4UxWzusdumGppYdgCXZbCsnqFcAmAQTGzUzKyvn9zDb"
+			]
+		}
+	},
+	"version": 1
+}

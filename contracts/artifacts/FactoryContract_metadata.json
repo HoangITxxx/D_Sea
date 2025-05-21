@@ -1,0 +1,357 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string[]",
+						"name": "_intervals",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "interval",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "contractAddress",
+						"type": "address"
+					}
+				],
+				"name": "NewIntervalContract",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_interval",
+						"type": "string"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "timestamp",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "endTimestamp",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "symbol",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "interval",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "firstTradeId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "lastTradeId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "open",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "high",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "low",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "close",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "volume",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "numberOfTrades",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "isClosed",
+								"type": "bool"
+							},
+							{
+								"internalType": "uint256",
+								"name": "quoteVolume",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerBuyVolume",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerBuyQuoteVolume",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct IntervalContract.KlineInput",
+						"name": "input",
+						"type": "tuple"
+					}
+				],
+				"name": "addKline",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getIntervals",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_interval",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_startTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_endTime",
+						"type": "uint256"
+					}
+				],
+				"name": "getKlineData",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "timestamp",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "endTimestamp",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "symbol",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "firstTradeId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "lastTradeId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "open",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "high",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "low",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "close",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "volume",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "numberOfTrades",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "isClosed",
+								"type": "bool"
+							},
+							{
+								"internalType": "uint256",
+								"name": "quoteVolume",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerBuyVolume",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "takerBuyQuoteVolume",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct IntervalContract.Kline[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "intervalContracts",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "contractAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startTimestamp",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "endTimestamp",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "intervals",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/FactoryContract.sol": "FactoryContract"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": [],
+		"viaIR": true
+	},
+	"sources": {
+		"contracts/FactoryContract.sol": {
+			"keccak256": "0x2d5560d62ca15528a3bc49017105e4ff2e283a0e5c8ee03d40d1cacf1ee0ccdf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fc1cc769785309e56e447a9d61a79871942e06bd5ea99c5d38c858ba6b3bf1af",
+				"dweb:/ipfs/QmWfYipqmMoRP4C4es7TBXwFVC49sQxKJjTiZngSx3A85L"
+			]
+		},
+		"contracts/IntervalContract.sol": {
+			"keccak256": "0x4b029ef5d9c90723e4aaff5e8b85b5d848b5fcce6ac0facab7cfa953fb1fe68f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7bbc20ccb840d75f34ab0a0695183eb7f98de682c62eb8590ed44b86267bbb19",
+				"dweb:/ipfs/QmT1muQugXD8yASvywZe94sAJsLCSJg8JFdVgveJuyCWBF"
+			]
+		}
+	},
+	"version": 1
+}

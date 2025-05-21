@@ -1,0 +1,805 @@
+{
+	"id": "23f812601be845b7a0739d6663102087",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.30",
+	"solcLongVersion": "0.8.30+commit.73712a01",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"structs/DataTypes.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.24;\r\n\r\nlibrary KlineDataLib {\r\n    struct CompactCandle {\r\n        uint64 startTime;\r\n        uint64 closeTime;\r\n        uint256 openPrice;\r\n        uint256 highPrice;\r\n        uint256 lowPrice;\r\n        uint256 closePrice;\r\n        uint256 volume;\r\n        bool isClosed;\r\n    }\r\n\r\n    enum Interval {\r\n        MIN_1, MIN_3, MIN_5, MIN_15, MIN_30,\r\n        HOUR_1, HOUR_2, HOUR_4, HOUR_6, HOUR_8, HOUR_12,\r\n        DAY_1, DAY_3,\r\n        WEEK_1,\r\n        MONTH_1,\r\n        COUNT // Để biết số lượng interval\r\n    }\r\n\r\n    // Có thể thêm các hằng số precision ở đây nếu muốn\r\n    // uint256 public constant PRICE_PRECISION_DECIMALS = 8;\r\n    // uint256 public constant VOLUME_PRECISION_DECIMALS = 4;\r\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": true,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"structs/DataTypes.sol": {
+				"KlineDataLib": {
+					"abi": [],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"structs/DataTypes.sol\":61:783  library KlineDataLib {... */\n  dataSize(sub_0)\n  dataOffset(sub_0)\n  0x0b\n  dup3\n  dup3\n  dup3\n  codecopy\n  dup1\n  mload\n  0x00\n  byte\n  0x73\n  eq\n  tag_1\n  jumpi\n  mstore(0x00, shl(0xe0, 0x4e487b71))\n  mstore(0x04, 0x00)\n  revert(0x00, 0x24)\ntag_1:\n  mstore(0x00, address)\n  0x73\n  dup2\n  mstore8\n  dup3\n  dup2\n  return\nstop\n\nsub_0: assembly {\n        /* \"structs/DataTypes.sol\":61:783  library KlineDataLib {... */\n      eq(address, deployTimeAddress())\n      mstore(0x40, 0x80)\n      revert(0x00, 0x00)\n\n    auxdata: 0xa2646970667358221220f0acd501e6fc1de8eaf721fe62c7898e945f5385a5d8e7dfe6dfedcf1123a40464736f6c634300081e0033\n}\n",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "60556032600b8282823980515f1a607314602657634e487b7160e01b5f525f60045260245ffd5b305f52607381538281f3fe730000000000000000000000000000000000000000301460806040525f5ffdfea2646970667358221220f0acd501e6fc1de8eaf721fe62c7898e945f5385a5d8e7dfe6dfedcf1123a40464736f6c634300081e0033",
+							"opcodes": "PUSH1 0x55 PUSH1 0x32 PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH0 BYTE PUSH1 0x73 EQ PUSH1 0x26 JUMPI PUSH4 0x4E487B71 PUSH1 0xE0 SHL PUSH0 MSTORE PUSH0 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH0 REVERT JUMPDEST ADDRESS PUSH0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 PUSH0 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 CREATE 0xAC 0xD5 ADD DUPN 0xFC SAR 0xE8 0xEA 0xF7 0x21 INVALID PUSH3 0xC7898E SWAP5 PUSH0 MSTORE8 DUP6 0xA5 0xD8 SWAPN 0xDF DUPN 0xDF 0xED 0xCF GT 0x23 LOG4 DIV PUSH5 0x736F6C6343 STOP ADDMOD 0x1E STOP CALLER ",
+							"sourceMap": "61:722:0:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;61:722:0;;;;;;;;;;;;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "730000000000000000000000000000000000000000301460806040525f5ffdfea2646970667358221220f0acd501e6fc1de8eaf721fe62c7898e945f5385a5d8e7dfe6dfedcf1123a40464736f6c634300081e0033",
+							"opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 PUSH0 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 CREATE 0xAC 0xD5 ADD DUPN 0xFC SAR 0xE8 0xEA 0xF7 0x21 INVALID PUSH3 0xC7898E SWAP5 PUSH0 MSTORE8 DUP6 0xA5 0xD8 SWAPN 0xDF DUPN 0xDF 0xED 0xCF GT 0x23 LOG4 DIV PUSH5 0x736F6C6343 STOP ADDMOD 0x1E STOP CALLER ",
+							"sourceMap": "61:722:0:-:0;;;;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "17000",
+								"executionCost": "96",
+								"totalCost": "17096"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "PUSH",
+									"source": 0,
+									"value": "B"
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "DUP3",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "DUP3",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "DUP3",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "MLOAD",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "BYTE",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "PUSH",
+									"source": 0,
+									"value": "73"
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "EQ",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": -1,
+									"end": -1,
+									"name": "PUSH",
+									"source": -1,
+									"value": "4E487B71"
+								},
+								{
+									"begin": -1,
+									"end": -1,
+									"name": "PUSH",
+									"source": -1,
+									"value": "E0"
+								},
+								{
+									"begin": -1,
+									"end": -1,
+									"name": "SHL",
+									"source": -1
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "PUSH",
+									"source": 0,
+									"value": "4"
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "PUSH",
+									"source": 0,
+									"value": "24"
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "ADDRESS",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "PUSH",
+									"source": 0,
+									"value": "73"
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "MSTORE8",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "DUP3",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 783,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a2646970667358221220f0acd501e6fc1de8eaf721fe62c7898e945f5385a5d8e7dfe6dfedcf1123a40464736f6c634300081e0033",
+									".code": [
+										{
+											"begin": 61,
+											"end": 783,
+											"name": "PUSHDEPLOYADDRESS",
+											"source": 0
+										},
+										{
+											"begin": 61,
+											"end": 783,
+											"name": "ADDRESS",
+											"source": 0
+										},
+										{
+											"begin": 61,
+											"end": 783,
+											"name": "EQ",
+											"source": 0
+										},
+										{
+											"begin": 61,
+											"end": 783,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 61,
+											"end": 783,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 61,
+											"end": 783,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 61,
+											"end": 783,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 61,
+											"end": 783,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 61,
+											"end": 783,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							},
+							"sourceList": [
+								"structs/DataTypes.sol",
+								"#utility.yul"
+							]
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.30+commit.73712a01\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"structs/DataTypes.sol\":\"KlineDataLib\"},\"evmVersion\":\"prague\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"structs/DataTypes.sol\":{\"keccak256\":\"0x1d6d7376df2084b3570b8a87d19ee36166308e0e1c3a099a40c8b97994124c3c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://56e2313f86a6db23e5e228c95d024e254df58182f46191282230ce429c2b5bc8\",\"dweb:/ipfs/QmZAyxY9XWnKfzwr6JsJJZonCyFAuwbXtEebFkEB52Pddp\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"structs/DataTypes.sol": {
+				"ast": {
+					"absolutePath": "structs/DataTypes.sol",
+					"exportedSymbols": {
+						"KlineDataLib": [
+							36
+						]
+					},
+					"id": 37,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".24"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "33:24:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "KlineDataLib",
+							"contractDependencies": [],
+							"contractKind": "library",
+							"fullyImplemented": true,
+							"id": 36,
+							"linearizedBaseContracts": [
+								36
+							],
+							"name": "KlineDataLib",
+							"nameLocation": "69:12:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"canonicalName": "KlineDataLib.CompactCandle",
+									"id": 18,
+									"members": [
+										{
+											"constant": false,
+											"id": 3,
+											"mutability": "mutable",
+											"name": "startTime",
+											"nameLocation": "128:9:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 18,
+											"src": "121:16:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint64",
+												"typeString": "uint64"
+											},
+											"typeName": {
+												"id": 2,
+												"name": "uint64",
+												"nodeType": "ElementaryTypeName",
+												"src": "121:6:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint64",
+													"typeString": "uint64"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 5,
+											"mutability": "mutable",
+											"name": "closeTime",
+											"nameLocation": "155:9:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 18,
+											"src": "148:16:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint64",
+												"typeString": "uint64"
+											},
+											"typeName": {
+												"id": 4,
+												"name": "uint64",
+												"nodeType": "ElementaryTypeName",
+												"src": "148:6:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint64",
+													"typeString": "uint64"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 7,
+											"mutability": "mutable",
+											"name": "openPrice",
+											"nameLocation": "183:9:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 18,
+											"src": "175:17:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 6,
+												"name": "uint256",
+												"nodeType": "ElementaryTypeName",
+												"src": "175:7:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 9,
+											"mutability": "mutable",
+											"name": "highPrice",
+											"nameLocation": "211:9:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 18,
+											"src": "203:17:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 8,
+												"name": "uint256",
+												"nodeType": "ElementaryTypeName",
+												"src": "203:7:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 11,
+											"mutability": "mutable",
+											"name": "lowPrice",
+											"nameLocation": "239:8:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 18,
+											"src": "231:16:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 10,
+												"name": "uint256",
+												"nodeType": "ElementaryTypeName",
+												"src": "231:7:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 13,
+											"mutability": "mutable",
+											"name": "closePrice",
+											"nameLocation": "266:10:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 18,
+											"src": "258:18:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 12,
+												"name": "uint256",
+												"nodeType": "ElementaryTypeName",
+												"src": "258:7:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 15,
+											"mutability": "mutable",
+											"name": "volume",
+											"nameLocation": "295:6:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 18,
+											"src": "287:14:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 14,
+												"name": "uint256",
+												"nodeType": "ElementaryTypeName",
+												"src": "287:7:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 17,
+											"mutability": "mutable",
+											"name": "isClosed",
+											"nameLocation": "317:8:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 18,
+											"src": "312:13:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_bool",
+												"typeString": "bool"
+											},
+											"typeName": {
+												"id": 16,
+												"name": "bool",
+												"nodeType": "ElementaryTypeName",
+												"src": "312:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bool",
+													"typeString": "bool"
+												}
+											},
+											"visibility": "internal"
+										}
+									],
+									"name": "CompactCandle",
+									"nameLocation": "96:13:0",
+									"nodeType": "StructDefinition",
+									"scope": 36,
+									"src": "89:244:0",
+									"visibility": "public"
+								},
+								{
+									"canonicalName": "KlineDataLib.Interval",
+									"id": 35,
+									"members": [
+										{
+											"id": 19,
+											"name": "MIN_1",
+											"nameLocation": "366:5:0",
+											"nodeType": "EnumValue",
+											"src": "366:5:0"
+										},
+										{
+											"id": 20,
+											"name": "MIN_3",
+											"nameLocation": "373:5:0",
+											"nodeType": "EnumValue",
+											"src": "373:5:0"
+										},
+										{
+											"id": 21,
+											"name": "MIN_5",
+											"nameLocation": "380:5:0",
+											"nodeType": "EnumValue",
+											"src": "380:5:0"
+										},
+										{
+											"id": 22,
+											"name": "MIN_15",
+											"nameLocation": "387:6:0",
+											"nodeType": "EnumValue",
+											"src": "387:6:0"
+										},
+										{
+											"id": 23,
+											"name": "MIN_30",
+											"nameLocation": "395:6:0",
+											"nodeType": "EnumValue",
+											"src": "395:6:0"
+										},
+										{
+											"id": 24,
+											"name": "HOUR_1",
+											"nameLocation": "412:6:0",
+											"nodeType": "EnumValue",
+											"src": "412:6:0"
+										},
+										{
+											"id": 25,
+											"name": "HOUR_2",
+											"nameLocation": "420:6:0",
+											"nodeType": "EnumValue",
+											"src": "420:6:0"
+										},
+										{
+											"id": 26,
+											"name": "HOUR_4",
+											"nameLocation": "428:6:0",
+											"nodeType": "EnumValue",
+											"src": "428:6:0"
+										},
+										{
+											"id": 27,
+											"name": "HOUR_6",
+											"nameLocation": "436:6:0",
+											"nodeType": "EnumValue",
+											"src": "436:6:0"
+										},
+										{
+											"id": 28,
+											"name": "HOUR_8",
+											"nameLocation": "444:6:0",
+											"nodeType": "EnumValue",
+											"src": "444:6:0"
+										},
+										{
+											"id": 29,
+											"name": "HOUR_12",
+											"nameLocation": "452:7:0",
+											"nodeType": "EnumValue",
+											"src": "452:7:0"
+										},
+										{
+											"id": 30,
+											"name": "DAY_1",
+											"nameLocation": "470:5:0",
+											"nodeType": "EnumValue",
+											"src": "470:5:0"
+										},
+										{
+											"id": 31,
+											"name": "DAY_3",
+											"nameLocation": "477:5:0",
+											"nodeType": "EnumValue",
+											"src": "477:5:0"
+										},
+										{
+											"id": 32,
+											"name": "WEEK_1",
+											"nameLocation": "493:6:0",
+											"nodeType": "EnumValue",
+											"src": "493:6:0"
+										},
+										{
+											"id": 33,
+											"name": "MONTH_1",
+											"nameLocation": "510:7:0",
+											"nodeType": "EnumValue",
+											"src": "510:7:0"
+										},
+										{
+											"id": 34,
+											"name": "COUNT",
+											"nameLocation": "528:5:0",
+											"nodeType": "EnumValue",
+											"src": "528:5:0"
+										}
+									],
+									"name": "Interval",
+									"nameLocation": "346:8:0",
+									"nodeType": "EnumDefinition",
+									"src": "341:238:0"
+								}
+							],
+							"scope": 37,
+							"src": "61:722:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "33:750:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

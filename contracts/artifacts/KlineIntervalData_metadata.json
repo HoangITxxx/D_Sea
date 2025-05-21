@@ -1,0 +1,508 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_symbol",
+						"type": "string"
+					},
+					{
+						"internalType": "enum KlineDataLib.Interval",
+						"name": "_intervalType",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_maxHistory",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_factoryAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_initialOracleAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_version",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "enum KlineDataLib.Interval",
+						"name": "interval",
+						"type": "uint8"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "version",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "string",
+						"name": "symbol",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint64",
+						"name": "startTime",
+						"type": "uint64"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "isUpdate",
+						"type": "bool"
+					}
+				],
+				"name": "KlineAddedToIntervalData",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOracleAddress",
+						"type": "address"
+					}
+				],
+				"name": "OracleAddressUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_KLINE_HISTORY",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint64",
+						"name": "_startTime",
+						"type": "uint64"
+					},
+					{
+						"internalType": "uint64",
+						"name": "_closeTime",
+						"type": "uint64"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_openPriceScaled",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_highPriceScaled",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_lowPriceScaled",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_closePriceScaled",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_volumeScaled",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "_isClosed",
+						"type": "bool"
+					}
+				],
+				"name": "addOrUpdateKline",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "factoryAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllKlinesInThisVersion",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint64",
+								"name": "startTime",
+								"type": "uint64"
+							},
+							{
+								"internalType": "uint64",
+								"name": "closeTime",
+								"type": "uint64"
+							},
+							{
+								"internalType": "uint256",
+								"name": "openPrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "highPrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "lowPrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "closePrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "volume",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "isClosed",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct KlineDataLib.CompactCandle[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getInfo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "workerSymbol",
+						"type": "string"
+					},
+					{
+						"internalType": "enum KlineDataLib.Interval",
+						"name": "workerInterval",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "workerVersion",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "workerKlineCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "workerMaxKlines",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_count",
+						"type": "uint256"
+					}
+				],
+				"name": "getKlines",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint64",
+								"name": "startTime",
+								"type": "uint64"
+							},
+							{
+								"internalType": "uint64",
+								"name": "closeTime",
+								"type": "uint64"
+							},
+							{
+								"internalType": "uint256",
+								"name": "openPrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "highPrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "lowPrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "closePrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "volume",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "isClosed",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct KlineDataLib.CompactCandle[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "intervalType",
+				"outputs": [
+					{
+						"internalType": "enum KlineDataLib.Interval",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "klineCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "klines",
+				"outputs": [
+					{
+						"internalType": "uint64",
+						"name": "startTime",
+						"type": "uint64"
+					},
+					{
+						"internalType": "uint64",
+						"name": "closeTime",
+						"type": "uint64"
+					},
+					{
+						"internalType": "uint256",
+						"name": "openPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "highPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lowPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "closePrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "volume",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isClosed",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "nextKlineIndex",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "oracleAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newOracleAddress",
+						"type": "address"
+					}
+				],
+				"name": "setOracle",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "version",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/KlineIntervalData.sol": "KlineIntervalData"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/KlineIntervalData.sol": {
+			"keccak256": "0xe4c9dbc929fefd1c8b40a752b1f25d72cb6d364dd83942617a7b628c5b5068a5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://12d529e34068b29678d6eb238cbf7a68fef100ae62c9ceae9c53839e1880b7a8",
+				"dweb:/ipfs/QmVfhZzXbQEdtkwd8EseJ9ozMu8mJhZ7yVh5oLB87aUHvm"
+			]
+		},
+		"structs/DataTypes.sol": {
+			"keccak256": "0x1d6d7376df2084b3570b8a87d19ee36166308e0e1c3a099a40c8b97994124c3c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://56e2313f86a6db23e5e228c95d024e254df58182f46191282230ce429c2b5bc8",
+				"dweb:/ipfs/QmZAyxY9XWnKfzwr6JsJJZonCyFAuwbXtEebFkEB52Pddp"
+			]
+		}
+	},
+	"version": 1
+}

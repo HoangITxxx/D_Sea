@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"structs/DataTypes.sol": "KlineDataLib"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"structs/DataTypes.sol": {
+			"keccak256": "0x1d6d7376df2084b3570b8a87d19ee36166308e0e1c3a099a40c8b97994124c3c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://56e2313f86a6db23e5e228c95d024e254df58182f46191282230ce429c2b5bc8",
+				"dweb:/ipfs/QmZAyxY9XWnKfzwr6JsJJZonCyFAuwbXtEebFkEB52Pddp"
+			]
+		}
+	},
+	"version": 1
+}
