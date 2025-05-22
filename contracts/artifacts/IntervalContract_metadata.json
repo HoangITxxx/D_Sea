@@ -35,6 +35,31 @@
 				"type": "event"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "endTimestamp",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "isClosed",
+						"type": "bool"
+					}
+				],
+				"name": "KlineAdded",
+				"type": "event"
+			},
+			{
 				"inputs": [],
 				"name": "MAX_KLINES",
 				"outputs": [
@@ -446,11 +471,11 @@
 	},
 	"sources": {
 		"contracts/IntervalContract.sol": {
-			"keccak256": "0x5b44a6148011e28059c7bb4e221fc21cbd8576430db7f1f901a5015a6c2c8b1e",
+			"keccak256": "0x7d4333440d51350006ada86c9f109b4134049d307602b87fa5e49a8f35c82a3c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1466e8aba3a23b74505a60c700daec62d36269bcd73c3e14ba27db4c4ee79b9f",
-				"dweb:/ipfs/QmS2qi4u141scbYKmFjdrrnz3N4xyzJSnmN6egtyf2bfrs"
+				"bzz-raw://c680becfdb59bd11f37aa49e1e467e50cc696d65bdf176e25cf9327cfa2f1551",
+				"dweb:/ipfs/Qmaxk7qj87vPj5rwif4te39ByEy1PEzhmeZ44YtZdzDatZ"
 			]
 		}
 	},

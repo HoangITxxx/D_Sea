@@ -47,6 +47,8 @@ contract IntervalContract {
     // bool public isActive = true;
 
     event ContractFull(uint256 timestamp);
+    // Thêm sự kiện mới
+    event KlineAdded(uint256 indexed timestamp, uint256 endTimestamp, bool isClosed);
 
     constructor(string memory _symbol, string memory _interval) {
         factory = msg.sender;
@@ -100,6 +102,8 @@ contract IntervalContract {
             takerBuyVolume: input.takerBuyVolume,
             takerBuyQuoteVolume: input.takerBuyQuoteVolume
         }));
+
+        emit KlineAdded(input.timestamp, input.endTimestamp, input.isClosed);
         return true;
     }
 
