@@ -6,19 +6,38 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "string[]",
-						"name": "_intervals",
-						"type": "string[]"
-					}
-				],
+				"inputs": [],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
 			{
 				"anonymous": false,
 				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "symbol",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "interval",
+						"type": "string"
+					}
+				],
+				"name": "NewIntervalAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "symbol",
+						"type": "string"
+					},
 					{
 						"indexed": false,
 						"internalType": "string",
@@ -36,7 +55,25 @@
 				"type": "event"
 			},
 			{
+				"anonymous": false,
 				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "symbol",
+						"type": "string"
+					}
+				],
+				"name": "NewSymbolAdded",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_symbol",
+						"type": "string"
+					},
 					{
 						"internalType": "string",
 						"name": "_interval",
@@ -136,7 +173,13 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_symbol",
+						"type": "string"
+					}
+				],
 				"name": "getIntervals",
 				"outputs": [
 					{
@@ -152,6 +195,11 @@
 				"inputs": [
 					{
 						"internalType": "string",
+						"name": "_symbol",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
 						"name": "_interval",
 						"type": "string"
 					},
@@ -163,6 +211,11 @@
 					{
 						"internalType": "uint256",
 						"name": "_endTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_limit",
 						"type": "uint256"
 					}
 				],
@@ -255,7 +308,25 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
 					{
 						"internalType": "string",
 						"name": "",
@@ -267,7 +338,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "intervalContracts",
+				"name": "symbolIntervalContracts",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -291,12 +362,17 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
 					}
 				],
-				"name": "intervals",
+				"name": "symbolIntervals",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -337,19 +413,19 @@
 	},
 	"sources": {
 		"contracts/FactoryContract.sol": {
-			"keccak256": "0x2d5560d62ca15528a3bc49017105e4ff2e283a0e5c8ee03d40d1cacf1ee0ccdf",
+			"keccak256": "0x9ea8dc893684ece39214f515af0d3b03f441fbacf681854beb2066feb8690bfa",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://fc1cc769785309e56e447a9d61a79871942e06bd5ea99c5d38c858ba6b3bf1af",
-				"dweb:/ipfs/QmWfYipqmMoRP4C4es7TBXwFVC49sQxKJjTiZngSx3A85L"
+				"bzz-raw://3a5b186c3e53b1d351d55db42418169900dd9f05c3b34a940c538a7547467a38",
+				"dweb:/ipfs/QmXVviHNuYWbgZ7JbD8nyi91zBMx1ZfDChRPyd18jkeYFa"
 			]
 		},
 		"contracts/IntervalContract.sol": {
-			"keccak256": "0x4b029ef5d9c90723e4aaff5e8b85b5d848b5fcce6ac0facab7cfa953fb1fe68f",
+			"keccak256": "0x5b44a6148011e28059c7bb4e221fc21cbd8576430db7f1f901a5015a6c2c8b1e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7bbc20ccb840d75f34ab0a0695183eb7f98de682c62eb8590ed44b86267bbb19",
-				"dweb:/ipfs/QmT1muQugXD8yASvywZe94sAJsLCSJg8JFdVgveJuyCWBF"
+				"bzz-raw://1466e8aba3a23b74505a60c700daec62d36269bcd73c3e14ba27db4c4ee79b9f",
+				"dweb:/ipfs/QmS2qi4u141scbYKmFjdrrnz3N4xyzJSnmN6egtyf2bfrs"
 			]
 		}
 	},

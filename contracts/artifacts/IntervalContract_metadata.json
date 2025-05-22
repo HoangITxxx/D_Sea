@@ -9,12 +9,30 @@
 				"inputs": [
 					{
 						"internalType": "string",
+						"name": "_symbol",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
 						"name": "_interval",
 						"type": "string"
 					}
 				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "ContractFull",
+				"type": "event"
 			},
 			{
 				"inputs": [],
@@ -145,6 +163,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "getInterval",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "getKlineCount",
 				"outputs": [
 					{
@@ -259,6 +290,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "getSymbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "interval",
 				"outputs": [
 					{
@@ -358,6 +402,19 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -389,11 +446,11 @@
 	},
 	"sources": {
 		"contracts/IntervalContract.sol": {
-			"keccak256": "0x4b029ef5d9c90723e4aaff5e8b85b5d848b5fcce6ac0facab7cfa953fb1fe68f",
+			"keccak256": "0x5b44a6148011e28059c7bb4e221fc21cbd8576430db7f1f901a5015a6c2c8b1e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7bbc20ccb840d75f34ab0a0695183eb7f98de682c62eb8590ed44b86267bbb19",
-				"dweb:/ipfs/QmT1muQugXD8yASvywZe94sAJsLCSJg8JFdVgveJuyCWBF"
+				"bzz-raw://1466e8aba3a23b74505a60c700daec62d36269bcd73c3e14ba27db4c4ee79b9f",
+				"dweb:/ipfs/QmS2qi4u141scbYKmFjdrrnz3N4xyzJSnmN6egtyf2bfrs"
 			]
 		}
 	},

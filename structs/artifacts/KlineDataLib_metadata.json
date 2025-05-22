@@ -29,15 +29,16 @@
 			"enabled": true,
 			"runs": 200
 		},
-		"remappings": []
+		"remappings": [],
+		"viaIR": true
 	},
 	"sources": {
 		"structs/DataTypes.sol": {
-			"keccak256": "0x1d6d7376df2084b3570b8a87d19ee36166308e0e1c3a099a40c8b97994124c3c",
+			"keccak256": "0x47f74c99a9df31a4bf1e4cd6b79defec6b8bfc870718adfb0d32714ad477a29f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://56e2313f86a6db23e5e228c95d024e254df58182f46191282230ce429c2b5bc8",
-				"dweb:/ipfs/QmZAyxY9XWnKfzwr6JsJJZonCyFAuwbXtEebFkEB52Pddp"
+				"bzz-raw://60fa4d946af2612f77d0e75a26b3dc5f422fd38eb85dfc5e69f2d9035aad01ba",
+				"dweb:/ipfs/QmSZgftDfsRz5mB2YJAEWZG6rpXtxTP3wGijMAEzusVJ2N"
 			]
 		}
 	},
