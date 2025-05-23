@@ -40,7 +40,7 @@ contract IntervalContract {
     }
 
     Kline[] public klines;
-    uint256 public constant MAX_KLINES = 2;
+    uint256 public constant MAX_KLINES = 10000;
     address public factory;
     string public symbol;
     string public interval;

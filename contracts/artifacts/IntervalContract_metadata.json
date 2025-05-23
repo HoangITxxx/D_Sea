@@ -471,11 +471,11 @@
 	},
 	"sources": {
 		"contracts/IntervalContract.sol": {
-			"keccak256": "0x7d4333440d51350006ada86c9f109b4134049d307602b87fa5e49a8f35c82a3c",
+			"keccak256": "0x97d4267b86bef6a5513759e1dc2443d8c338c355faf7cd2bdd848c55c2aacf08",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c680becfdb59bd11f37aa49e1e467e50cc696d65bdf176e25cf9327cfa2f1551",
-				"dweb:/ipfs/Qmaxk7qj87vPj5rwif4te39ByEy1PEzhmeZ44YtZdzDatZ"
+				"bzz-raw://fbb0aa0ffed774f301418217122d9cf37f80245f47d9fdcf202c772a1209f565",
+				"dweb:/ipfs/QmbpKNpbgh6L4XYJ57CeMMrHmtq99HHoKJCQxkr6aBCjwu"
 			]
 		}
 	},
